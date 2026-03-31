@@ -4,11 +4,11 @@ image:
 
 container:
   name: nginx-custom
-  port: 443
+  port: 80
 
 service:
-  port: 443
-  targetPort: 443
+  port: 80
+  targetPort: 80
   
 ingress:
   enabled: true
