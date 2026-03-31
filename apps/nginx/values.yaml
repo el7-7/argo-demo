@@ -42,3 +42,9 @@ persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
 
+ingress:
+  enabled: true
+  className: nginx
+  host: nginx.local
+  path: /
+
