@@ -1,6 +1,5 @@
 namespace: default
 replicaCount: 1
-appLabel: nginx-custom-org2
 
 image:
   repository: my-nginx-custom-org2
