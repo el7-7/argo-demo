@@ -1,3 +1,7 @@
+namespace: default
+replicaCount: 1
+appLabel: nginx-custom-org2
+
 image:
   repository: my-nginx-custom-org2
   tag: "1.0"
@@ -7,9 +11,10 @@ container:
   port: 80
 
 service:
+  type: ClusterIP
   port: 80
   targetPort: 80
-  
+
 ingress:
   enabled: true
   className: nginx
