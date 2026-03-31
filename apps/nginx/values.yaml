@@ -13,10 +13,8 @@ container:
   port: 80
 
 service:
-  type: NodePort
   port: 80
   targetPort: 80
-  nodePort: 30009
 
 resources:
   requests:
