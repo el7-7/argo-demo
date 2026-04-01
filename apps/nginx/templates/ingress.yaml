@@ -24,20 +24,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-server-ingress
-  namespace: argocd
+  name: org1-server-ingress
+  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   rules:
-  - host: argocd.test
+  - host: org1.test
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: argocd-server
+            name: org1-server
             port:
               name: http
