@@ -1,22 +1,22 @@
-namespace: default
-replicaCount: 1
-appLabel: nginx-custom
+# namespace: default
+# replicaCount: 1
+# appLabel: nginx-custom
 
-image:
-  repository: my-nginx-custom-org2
-  tag: "1.0"
+# image:
+#   repository: my-nginx-custom-org2
+#   tag: "1.0"
 
-container:
-  name: nginx-custom
-  port: 80
+# container:
+#   name: nginx-custom
+#   port: 80
 
-service:
-  type: LoadBalancer
-  port: 80
-  targetPort: 80
+# service:
+#   type: LoadBalancer
+#   port: 80
+#   targetPort: 80
 
-ingress:
-  enabled: true
-  className: nginx
-  host: test2.local
-  path: /
+# ingress:
+#   enabled: true
+#   className: nginx
+#   host: test2.local
+#   path: /
