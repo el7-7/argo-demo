@@ -18,5 +18,5 @@ spec:
               service:
                 name: {{ .Release.Name }}
                 port:
-                  name: {{ .Values.service.name }}
+                  name: http
 {{- end }}
