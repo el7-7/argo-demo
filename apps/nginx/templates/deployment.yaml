@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Values.service.name }}
   namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.appLabel }}
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.container.name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           ports:
             - containerPort: {{ .Values.container.port }}
           resources:
@@ -37,10 +37,7 @@ spec:
               port: {{ .Values.container.port }}
             initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
             periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
-          volumeMounts:
-            - name: nginx-storage
-              mountPath: {{ .Values.volume.mountPath }}
       volumes:
-        - name: nginx-storage
+        - name: {{ .Values.volume.claimName }}
           persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-data
+            claimName: {{ .Values.volume.claimName }}
