@@ -46,4 +46,4 @@ ingress:
   host: org1.test
   path: /
   namespace: default
-  
+  name: org1-server-ingress
