@@ -1,7 +1,6 @@
 namespace: default
 
 replicaCount: 1
-
 appLabel: nginx-custom
 
 image:
@@ -11,6 +10,12 @@ image:
 container:
   name: nginx-custom
   port: 80
+
+service:
+  name: org1-server
+  port: 80
+  targetPort: 80
+  portName: http
 
 resources:
   requests:
@@ -35,7 +40,6 @@ volume:
 persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
-namespace: default
 
 ingress:
   name: org1-server-ingress
@@ -44,7 +48,3 @@ ingress:
   path: /
   pathType: Prefix
   forceSslRedirect: "false"
-
-service:
-  port: 80
-  targetPort: 80
