@@ -39,11 +39,16 @@ volume:
 persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
+namespace: default
 
-# ingress:
-#   enabled: true
-#   className: nginx
-#   host: org1.test
-#   path: /
-#   namespace: default
-#   name: org1-server-ingress
+ingress:
+  name: org1-server-ingress
+  className: nginx
+  host: org1.test
+  path: /
+  pathType: Prefix
+  forceSslRedirect: "false"
+
+service:
+  name: org1-server
+  portName: http
