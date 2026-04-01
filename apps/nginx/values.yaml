@@ -45,4 +45,5 @@ ingress:
   className: nginx
   host: org1.test
   path: /
-
+  namespace: default
+  
