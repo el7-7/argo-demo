@@ -40,10 +40,10 @@ persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
 
-ingress:
-  enabled: true
-  className: nginx
-  host: org1.test
-  path: /
-  namespace: default
-  name: org1-server-ingress
+# ingress:
+#   enabled: true
+#   className: nginx
+#   host: org1.test
+#   path: /
+#   namespace: default
+#   name: org1-server-ingress
