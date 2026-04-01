@@ -43,6 +43,6 @@ persistence:
 ingress:
   enabled: true
   className: nginx
-  host: test.local
+  host: org1.test
   path: /
 
