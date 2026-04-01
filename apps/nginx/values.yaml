@@ -12,10 +12,6 @@ container:
   name: nginx-custom
   port: 80
 
-service:
-  port: 80
-  targetPort: 80
-
 resources:
   requests:
     cpu: 100m
@@ -51,4 +47,6 @@ ingress:
 
 service:
   name: org1-server
+  port: 80
+  targetPort: 80
   portName: http
