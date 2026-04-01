@@ -35,7 +35,7 @@ probes:
 
 volume:
   mountPath: /usr/share/nginx/html/files
-  claimName: nginx
+  claimName: nginx-org2
 
 persistence:
   accessMode: ReadWriteOnce
