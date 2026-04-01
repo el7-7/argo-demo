@@ -45,5 +45,5 @@ ingress:
   className: nginx
   host: org1.test
   path: /
-  port: http
+  name: http
 
