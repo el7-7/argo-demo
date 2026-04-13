@@ -7,11 +7,6 @@ wordpressBlogDescription: "Testing Argo deployments"
 service:
   type: ClusterIP   # 👈 important: NOT LoadBalancer
 
-mariadb:
-  enabled: true
-  image:
-    tag: "*"   # 👈 remove override if you added one
-
 ingress:
   enabled: true
   ingressClassName: nginx
