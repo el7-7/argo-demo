@@ -1,0 +1,17 @@
+wordpressUsername: admin
+wordpressPassword: admin123
+
+mariadb:
+  auth:
+    rootPassword: rootpass123
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  hostname: argo.test.com
+  path: /
+  pathType: Prefix
+
+persistence:
+  enabled: true
+  size: 10Gi
