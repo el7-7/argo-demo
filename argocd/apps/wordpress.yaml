@@ -16,7 +16,7 @@ spec:
           - $values/apps/wordpress/org1-prod-values.yaml
 
     # 🔹 Source 2: Your Git repo
-    - repoURL: https://github.com/YOUR_ORG/gitops-repo
+    - repoURL: https://github.com/el7-7/argo-demo.git
       targetRevision: HEAD
       ref: values   # 👈 this is the key
 
