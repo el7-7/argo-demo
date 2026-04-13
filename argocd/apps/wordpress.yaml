@@ -1,21 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wordpress
+  name: wordpress-org1-prod
   namespace: argocd
 spec:
   project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: org1-prod      # 👈 your app namespace
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: wordpress
     targetRevision: 18.0.0
     helm:
       valueFiles:
-        - values.yaml
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: wordpress
+        - org1-prod-values.yaml
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true   # 👈 auto-create namespace
