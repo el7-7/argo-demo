@@ -15,8 +15,9 @@ ingress:
   pathType: Prefix
 
 mariadb:
+  enabled: true
   auth:
-    rootPassword: rootpass123
+    database: wordpress
 
 persistence:
   enabled: true
