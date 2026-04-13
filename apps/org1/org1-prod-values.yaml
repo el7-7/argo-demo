@@ -8,10 +8,9 @@ service:
   type: ClusterIP   # 👈 important: NOT LoadBalancer
 
 mariadb:
+  enabled: true
   image:
-    registry: docker.io
-    repository: bitnami/mariadb
-    tag: 11.4.3-debian-12-r0
+    tag: ""   # 👈 remove override if you added one
 
 ingress:
   enabled: true
