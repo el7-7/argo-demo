@@ -10,7 +10,7 @@ service:
 ingress:
   enabled: true
   ingressClassName: nginx
-  hostname: wordpress.local
+  hostname: argo.test.com
   path: /
   pathType: Prefix
 
