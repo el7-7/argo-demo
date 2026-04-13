@@ -1,8 +1,8 @@
-  wordpressUsername: admin
-  wordpressPassword: password123
-  wordpressEmail: admin@example.com
-  wordpressBlogName: "My Test Site with Argo"
-  wordpressBlogDescription: "Testing Argo deployments"
+wordpressUsername: admin
+wordpressPassword: password123
+wordpressEmail: admin@example.com
+wordpressBlogName: "My Test Site with Argo"
+wordpressBlogDescription: "Testing Argo deployments"
 
 mariadb:
   auth:
