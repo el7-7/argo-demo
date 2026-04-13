@@ -10,6 +10,6 @@ service:
 ingress:
   enabled: true
   ingressClassName: nginx
-  hostname: flux.test.com
+  hostname: argo.test.com
   annotations:
     kubernetes.io/ingress.class: nginx
