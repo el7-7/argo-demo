@@ -5,19 +5,28 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
+  sources:
+    # 🔹 Source 1: Helm chart
+    - repoURL: https://charts.bitnami.com/bitnami
+      chart: wordpress
+      targetRevision: 18.0.0
+      helm:
+        valueFiles:
+          - $values/apps/wordpress/org1-prod-values.yaml
+
+    # 🔹 Source 2: Your Git repo
+    - repoURL: https://github.com/YOUR_ORG/gitops-repo
+      targetRevision: HEAD
+      ref: values   # 👈 this is the key
+
   destination:
     server: https://kubernetes.default.svc
-    namespace: org1-prod      # 👈 your app namespace
-  source:
-    repoURL: https://charts.bitnami.com/bitnami
-    chart: wordpress
-    targetRevision: 18.0.0
-    helm:
-      valueFiles:
-        - org1-prod-values.yaml
+    namespace: org1-prod
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true   # 👈 auto-create namespace
+      - CreateNamespace=true
