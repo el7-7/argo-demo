@@ -4,16 +4,19 @@ wordpressEmail: admin@example.com
 wordpressBlogName: "My Test Site with Argo"
 wordpressBlogDescription: "Testing Argo deployments"
 
-mariadb:
-  auth:
-    rootPassword: rootpass123
+service:
+  type: ClusterIP   # 👈 important: NOT LoadBalancer
 
 ingress:
   enabled: true
-  ingressClassName: nginx   # 👈 must match ingress controller
-  hostname: argocd.test.com
+  ingressClassName: nginx
+  hostname: wordpress.local
   path: /
   pathType: Prefix
+
+mariadb:
+  auth:
+    rootPassword: rootpass123
 
 persistence:
   enabled: true
