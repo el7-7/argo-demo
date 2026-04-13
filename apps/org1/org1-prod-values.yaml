@@ -10,7 +10,7 @@ service:
 mariadb:
   enabled: true
   image:
-    tag: ""   # 👈 remove override if you added one
+    tag: "*"   # 👈 remove override if you added one
 
 ingress:
   enabled: true
