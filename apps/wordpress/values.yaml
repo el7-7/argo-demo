@@ -1,5 +1,8 @@
-wordpressUsername: admin
-wordpressPassword: admin123
+  wordpressUsername: admin
+  wordpressPassword: password123
+  wordpressEmail: admin@example.com
+  wordpressBlogName: "My Test Site with Argo"
+  wordpressBlogDescription: "Testing Argo deployments"
 
 mariadb:
   auth:
@@ -7,8 +10,8 @@ mariadb:
 
 ingress:
   enabled: true
-  ingressClassName: nginx
-  hostname: argo.test.com
+  ingressClassName: nginx   # 👈 must match ingress controller
+  hostname: argocd.test.com
   path: /
   pathType: Prefix
 
