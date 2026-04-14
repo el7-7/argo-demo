@@ -6,11 +6,10 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: oci://registry-1.docker.io/bitnamicharts
+    - path: bitnamicharts/wordpress
+      repoURL: registry-1.docker.io
       targetRevision: 30.0.4
-      chart: wordpress
       helm:
-        passCredentials: true
         valueFiles:
           - $values/apps/org1/org1-prod-values.yaml
 
