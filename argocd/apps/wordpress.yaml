@@ -7,7 +7,6 @@ spec:
   project: default
 
   sources:
-    # 🔹 Source 1: Helm chart
     - repoURL: https://charts.bitnami.com/bitnami
       chart: wordpress
       targetRevision: 18.0.0
@@ -15,10 +14,9 @@ spec:
         valueFiles:
           - $values/apps/org1/org1-prod-values.yaml
 
-    # 🔹 Source 2: Your Git repo
     - repoURL: https://github.com/el7-7/argo-demo.git
       targetRevision: HEAD
-      ref: values   # 👈 this is the key
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
