@@ -13,7 +13,7 @@ spec:
       # Reference values files relative to the chart path
         valueFiles:
           - $values/apps/org1/org1-prod-values.yaml
-    - repoURL: https://github.com/YOUR_ORG/YOUR_REPO.git
+    - repoURL: https://github.com/el7-7/argo-demo.git
       targetRevision: main
       ref: values
   destination:
