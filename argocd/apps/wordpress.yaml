@@ -5,10 +5,14 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: registry-1.docker.io/bitnamicharts
-    chart: wordpress
-    targetRevision: 30.0.4
+  sources:
+    - repoURL: registry-1.docker.io/bitnamicharts
+      chart: wordpress
+      targetRevision: 30.0.4
+      helm:
+      # Reference values files relative to the chart path
+        valueFiles:
+          - $values/apps/org1/org1-prod-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: org1-prod
