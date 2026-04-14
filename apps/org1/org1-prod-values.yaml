@@ -4,7 +4,7 @@ wordpressEmail: admin@example.com
 wordpressBlogName: "My Test Site with Argo"
 wordpressBlogDescription: "Testing Argo deployments"
 
-replicaCount: 2
+replicaCount: 1
 
 service:
   type: ClusterIP
