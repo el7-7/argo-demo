@@ -6,14 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    path: .
-    repoURL: oci://registry-1.docker.io/bitnamicharts/nginx 
-    targetRevision: 15.9.0
-    helm:
-      valuesObject:
-        some-value: foo
+    path: bitnamicharts/nginx
+    repoURL: registry-1.docker.io
+    targetRevision: 1.16.1
   destination:
-    server: https://kubernetes.default.svc
+    server: "https://kubernetes.default.svc"
     namespace: org1-prod
   syncPolicy:
     automated:
