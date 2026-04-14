@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wordpress-org1-prod
+  name: nginx-org1-prod
   namespace: argocd
 spec:
   project: default
   source:
-    path: bitnamicharts/nginx
-    repoURL: registry-1.docker.io
-    targetRevision: 1.29.8
+    repoURL: https://charts.bitnami.com/bitnami
+    chart: nginx
+    targetRevision: 15.14.0
   destination:
-    server: "https://kubernetes.default.svc"
+    server: https://kubernetes.default.svc
     namespace: org1-prod
   syncPolicy:
     automated:
