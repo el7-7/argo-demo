@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: registry-1.docker.io/bitnamicharts
-    chart: nginx
-    targetRevision: 15.14.0
+    chart: wordpress
+    targetRevision: 30.0.4
   destination:
     server: https://kubernetes.default.svc
     namespace: org1-prod
