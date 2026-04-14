@@ -4,6 +4,13 @@ wordpressEmail: admin@example.com
 wordpressBlogName: "My Test Site with Argo"
 wordpressBlogDescription: "Testing Argo deployments"
 
+mariadb:
+  auth:
+    rootPassword: password123
+    database: wordpress
+    username: wordpress
+    password: wordpresspass
+
 replicaCount: 1
 
 service:
