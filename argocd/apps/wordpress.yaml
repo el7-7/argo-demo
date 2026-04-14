@@ -8,7 +8,7 @@ spec:
   source:
     path: bitnamicharts/nginx
     repoURL: registry-1.docker.io
-    targetRevision: 22.6.12
+    targetRevision: 1.29.8
   destination:
     server: "https://kubernetes.default.svc"
     namespace: org1-prod
