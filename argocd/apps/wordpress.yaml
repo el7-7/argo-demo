@@ -7,9 +7,9 @@ spec:
   project: default
 
   sources:
-    - repoURL: https://charts.bitnami.com/bitnamilegacy
+    - repoURL: https://charts.bitnami.com/bitnami
       chart: wordpress
-      targetRevision: 20.0.0
+      targetRevision: 25.0.0
       helm:
         valueFiles:
           - $values/apps/org1/org1-prod-values.yaml
