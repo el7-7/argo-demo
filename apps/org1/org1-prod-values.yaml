@@ -4,6 +4,8 @@ wordpressEmail: admin@example.com
 wordpressBlogName: "My Test Site with Argo"
 wordpressBlogDescription: "Testing Argo deployments"
 
+replicaCount: 2
+
 service:
   type: ClusterIP
 
@@ -13,3 +15,5 @@ ingress:
   hostname: argo.test.com
   annotations:
     kubernetes.io/ingress.class: nginx
+
+
