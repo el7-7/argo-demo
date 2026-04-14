@@ -6,21 +6,15 @@ metadata:
 spec:
   project: default
   sources:
-    - path: bitnamicharts/nginx
-      repoURL: registry-1.docker.io
+    - repoURL: registry-1.docker.io
+      path: bitnamicharts/nginx
       targetRevision: 1.16.1
-      helm:
-        valueFiles:
-          - $values/apps/org1/org1-prod-values.yaml
-
     - repoURL: https://github.com/el7-7/argo-demo.git
       targetRevision: main
       ref: values
-
   destination:
     server: https://kubernetes.default.svc
     namespace: org1-prod
-
   syncPolicy:
     automated:
       prune: true
