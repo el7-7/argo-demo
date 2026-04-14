@@ -5,11 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
   sources:
     - repoURL: oci://registry-1.docker.io/bitnamicharts/wordpress
-      chart: wordpress
-      targetRevision: 20.0.0
+      path: .
+      targetRevision: 30.0.4
       helm:
         valueFiles:
           - $values/apps/org1/org1-prod-values.yaml
