@@ -5,13 +5,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    - repoURL: registry-1.docker.io
-      path: bitnamicharts/nginx
-      targetRevision: 1.16.1
-    - repoURL: https://github.com/el7-7/argo-demo.git
-      targetRevision: main
-      ref: values
+  source:
+    path: .
+    repoURL: oci://registry-1.docker.io/bitnamicharts/nginx 
+    targetRevision: 15.9.0
+    helm:
+      valuesObject:
+        some-value: foo
   destination:
     server: https://kubernetes.default.svc
     namespace: org1-prod
