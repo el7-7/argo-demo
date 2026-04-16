@@ -1,3 +1,5 @@
 controller:
   service:
     type: LoadBalancer
+
+replicas: 2
