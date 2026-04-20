@@ -4,7 +4,7 @@ metadata:
   name: test-app
   namespace: argocd-deploycancel-test
 spec:
-  replicas: 1
+  replicas: NaN
   selector:
     matchLabels:
       app: test-app
