@@ -1,1 +1,24 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app
+  namespace: argocd-deploycancel-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      initContainers:
+      - name: slow-start
+        image: busybox
+        command: ["sh", "-c", "sleep 120"]
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
