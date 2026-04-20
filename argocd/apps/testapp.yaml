@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR-USERNAME/YOUR-REPO.git
+    repoURL: https://github.com/el7-7/argo-demo.git
     targetRevision: HEAD
     path: test-app
   destination:
