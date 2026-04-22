@@ -4,7 +4,7 @@ metadata:
   name: wordpress-site-org1
   namespace: argocd
 spec:
-  project: default
+  project: wordpress-org1
   sources:
     - repoURL: registry-1.docker.io/bitnamicharts
       chart: wordpress
