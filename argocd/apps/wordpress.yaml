@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wordpress-org1-prod
+  name: wordpress-org1
   namespace: argocd
 spec:
   project: default
@@ -18,7 +18,7 @@ spec:
       ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: org1-prod
+    namespace: org1
   syncPolicy:
     automated:
       prune: true
