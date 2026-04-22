@@ -4,7 +4,7 @@ metadata:
   name: wordpress-app
   namespace: argocd
 spec:
-  project: default
+  project: wordpress-org1
   source:
     repoURL: https://github.com/el7-7/argo-demo.git
     targetRevision: HEAD
